@@ -18,7 +18,7 @@ while notCaptured:
 
         #processing
         img_gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-        
+
         #face detect in form
         faces=fd.detectMultiScale(img_gray,scaleFactor=1.1,minNeighbors=5,minSize=(180,180))
        
