@@ -1,6 +1,0 @@
-numpy
-pandas
-matpotlib
-opencv-python3
-
-//python3 -m pip install -r requirement.txt
