@@ -4,7 +4,7 @@ from time import sleep
 import face_recognition as fr
 import pandas as pd
 import numpy as np
-import webbrowser as wb
+import webbrowser as wb 
 
 fd=cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 vid=cv2.VideoCapture(0)
@@ -27,11 +27,15 @@ while True:
                 for ind,entries in old_data.iterrows():
                     matched=fr.compare_faces(face_encoding,np.array(eval(entries['encoding'])))
                     confidence=1-fr.face_distance(face_encoding,np.array(eval(entries['encoding'])))
-                    if matched and confidence>0:
+                    if matched and confidence>0.5:
                         print(entries['names'])
                         cv2.putText(img,entries['names'],(30,30),cv2.FONT_HERSHEY_COMPLEX,1.5,(0,0,255),5)
                         if entries['names']=='aman':
                             wb.open_new("https://www.youtube.com/")
+                            break
+                        elif entries['names']=='arpitR':
+                            wb.open("https://www.Spotify.com/")
+                            break
                         break
            # print(face_encoding)
 
