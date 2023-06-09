@@ -1,15 +1,15 @@
-from flask import Flask
-
+from flask import Flask ,render_template
+                           #app:-object
 app=Flask(__name__)
 
-@app.route('/')
-
+@app.route('/')  #decorator
 def sample():
     return 'kuch bhi sample'
 
-@app.route('/new')
-def sample1():
-    return'<h1>This is Flask'
+@app.route('/new/<name>')
+def sample1(name):
+    print(name)
+    return render_template('home.html',name_value=name)
 
 app.run(debug=True)
 
