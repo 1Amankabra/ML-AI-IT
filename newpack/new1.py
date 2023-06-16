@@ -1,2 +1,0 @@
-def xyz():
-    print('xyz')
