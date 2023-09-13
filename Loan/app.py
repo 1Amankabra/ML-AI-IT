@@ -13,8 +13,7 @@
 # result='Probable' if result==1 else 'Not Probable'
 # print(f'This customer is {result} for Personal Loan')
 
-
-#Form Flask ML Model Implementation
+#Form Flask ML Model I
 import pandas as pd
 from flask import Flask,render_template,request
 app=Flask(__name__)
