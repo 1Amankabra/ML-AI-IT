@@ -3,26 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Loan Model App</title>
 </head>
 <body>
-    <h1>Loan Customer Prediction</h1>
-    <form  method="post">
-        <label>Income</label>
-        <input type="text" name="Income">
-        <br>
-        <label>Family</label>
-        <input type="text" name="Family">
-        <br>
-        <label>CCAvg</label>
-        <input type="text" name="CCAvg">
-        <br>
-        <label>Education</label>
-        <input type="text" name="Education">
-        <br>
-        <input type="submit" value="Submit">
-        <br>
-    </form>
-    <h3 style="color: blueviolet;">{{result}}</h3>
+    <header class="p-3 text-bg-dark">
+        <div class="container">   
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <img src="static/images/pngegg.png" alt="bank"  width="40" height="32">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
+                </ul>
+
+                <div class="text-end">
+                <button type="button" class="btn btn-outline-light me-2">Loan Model</button>
+                <button type="button" class="btn btn-warning">Social</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Loan Modelling App</h1>
+          <p class="col-lg-10 fs-4">In finance, a loan is the transfer of money by one party to another with an agreement to pay it back. The recipient, or borrower, incurs a debt and is usually required to pay interest for the use of the money.</p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" method="post">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="Income" placeholder="Income" name="Income">
+              <label for="Income">Income</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="Family" placeholder="Family" name="Family">
+                <label for="Family">Family</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="CCAvg" placeholder="CCAvg" name="CCAvg">
+                <label for="CCAvg">CCAvg</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="Education" placeholder="Education" name="Education">
+                <label for="Education">Education</label>
+            </div>
+            
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+            <hr class="my-4">
+            <h3 style="color: blueviolet;">{{result}}</h3>
+          </form>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
